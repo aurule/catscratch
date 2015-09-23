@@ -19,6 +19,7 @@ gem 'rake', '~> 0.9.6'
 group :development, :test do
   gem 'sqlite3'
   gem 'minitest'
+  gem 'minitest-ci', :git => 'git@github.com:circleci/minitest-ci.git'
   gem 'thor'
 end
 
@@ -65,4 +66,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
