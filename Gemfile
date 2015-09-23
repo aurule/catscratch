@@ -19,13 +19,14 @@ gem 'rake', '~> 0.9.6'
 group :development, :test do
   gem 'sqlite3'
   gem 'minitest'
+  gem 'minitest-ci', :git => 'git@github.com:circleci/minitest-ci.git'
   gem 'thor'
 end
 
 # Add support for the MySQL
-group :production, :mysql do
-  gem 'mysql2'
-end
+# group :production, :mysql do
+#   gem 'mysql2'
+# end
 
 group :production, :postgresql do
   gem 'pg'
@@ -65,4 +66,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
