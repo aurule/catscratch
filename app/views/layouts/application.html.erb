@@ -7,8 +7,19 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <%= link_to "sample app", '#', id: "logo" %>
+            <nav>
+                <li><%= link_to "Home", '#' %></li>
+                <li><%= link_to "Help", '#' %></li>
+                <li><%= link_to "Log In", '#' %></li>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <%= yield %>
 
-<%= yield %>
-
+    </div>
 </body>
 </html>
