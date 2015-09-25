@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
                         format: {with: /@/},
                         uniqueness: {case_sensitive: false}
     has_secure_password
+    validates :password, presence: true, length: {minimum: 8}
 end
