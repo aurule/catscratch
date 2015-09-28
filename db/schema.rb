@@ -11,22 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923142526) do
+ActiveRecord::Schema.define(version: 20150925152808) do
 
-  create_table "businesses", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "description", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
-  create_table "hours", force: :cascade do |t|
-    t.text     "label"
-    t.time     "openat"
-    t.time     "closeat"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "business_id"
-  end
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
